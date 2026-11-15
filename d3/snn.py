@@ -130,8 +130,18 @@ def make_tau(mode, H, seed, tau_h=0.02, gamma_k=3.0):
     raise ValueError(mode)
 
 
+def channel_shift(x, max_shift, g):
+    """Shift each sample by a random integer in [-max_shift, max_shift] input channels (zero fill)."""
+    B, T, C = x.shape
+    sh = torch.randint(-max_shift, max_shift + 1, (B, 1), generator=g)
+    src = torch.arange(C).unsqueeze(0) - sh                    # (B, C) source channel for each target
+    ok = (src >= 0) & (src < C)
+    out = torch.gather(x, 2, src.clamp(0, C - 1).unsqueeze(1).expand(B, T, C))
+    return out * ok.unsqueeze(1)
+
+
 def train(cfg):
-    """cfg keys: name, seed, H, epochs, lr, bs, tau0 (float or list[H]), learn_mask (bool or list[H]),
+    """cfg keys: name, seed, shift (channel-shift augmentation, in input channels), order_seed, H, epochs, lr, bs, tau0 (float or list[H]), learn_mask (bool or list[H]),
     thr (float or list[H]), rate_penalty (lambda on mean firing rate), tau_lr_mult, save (path or None),
     init_from (state-dict path or None; weights only unless load_tau)."""
     torch.set_num_threads(cfg.get("threads", 1))
@@ -160,7 +170,10 @@ def train(cfg):
         perm = torch.randperm(n, generator=g)
         for i in range(0, n, bs):
             idx = perm[i:i + bs]
-            out, cnt = model(D["xtr"][idx].float())
+            xb = D["xtr"][idx].float()
+            if cfg.get("shift", 0) > 0:                         # augmentation: random shift along the channel axis
+                xb = channel_shift(xb, cfg["shift"], g)
+            out, cnt = model(xb)
             loss = nn.functional.cross_entropy(out, D["ytr"][idx])
             if lam > 0:
                 loss = loss + lam * cnt.mean() / x_T  # lam x mean firing probability per step

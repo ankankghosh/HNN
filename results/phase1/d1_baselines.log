@@ -1,1 +1,103 @@
 seed 0 ep 0 val 38.30 t 65s
+seed 0 ep 1 val 48.60 t 128s
+seed 0 ep 2 val 63.52 t 190s
+seed 0 ep 3 val 66.48 t 253s
+seed 0 ep 4 val 68.30 t 317s
+seed 0 ep 5 val 66.78 t 380s
+seed 0 ep 6 val 69.16 t 444s
+seed 0 ep 7 val 72.54 t 503s
+seed 0 ep 8 val 70.92 t 565s
+seed 0 ep 9 val 75.50 t 625s
+seed 0 ep 10 val 76.48 t 687s
+seed 0 ep 11 val 79.02 t 748s
+seed 0 ep 12 val 81.08 t 808s
+seed 0 ep 13 val 82.26 t 870s
+seed 0 ep 14 val 82.70 t 929s
+seed 0 float val 82.70 test 83.00
+seed 0 B=2.0 uniform    avg 2.000 rtn 18.27 rtn_bn 50.82 ft 75.07 (39s)
+seed 0 B=2.0 per_layer  avg 2.000 rtn 18.27 rtn_bn 50.82 ft 75.07 (38s)
+seed 0 B=2.0 hawq_style avg 2.000 rtn 18.27 rtn_bn 50.82 ft 75.07 (38s)
+seed 0 B=2.0 wf         avg 2.000 rtn 18.27 rtn_bn 50.82 ft 75.07 (40s)
+seed 0 B=2.0 baq        avg 2.000 rtn 18.27 rtn_bn 50.82 ft 75.07 (38s)
+seed 0 B=2.0 wf_global  avg 2.000 rtn 18.27 rtn_bn 50.82 ft 75.07 (39s)
+seed 0 B=2.25 per_layer  avg 2.248 rtn 51.81 rtn_bn 78.16 ft 78.54 (39s)
+seed 0 B=2.25 hawq_style avg 2.248 rtn 51.81 rtn_bn 78.16 ft 78.54 (38s)
+seed 0 B=2.25 wf         avg 2.246 rtn 58.68 rtn_bn 78.24 ft 77.74 (39s)
+seed 0 B=2.25 baq        avg 2.245 rtn 53.03 rtn_bn 76.12 ft 77.82 (37s)
+seed 0 B=2.25 wf_global  avg 2.250 rtn 59.75 rtn_bn 78.21 ft 77.80 (36s)
+seed 0 B=2.5 per_layer  avg 2.494 rtn 72.80 rtn_bn 80.49 ft 80.32 (37s)
+seed 0 B=2.5 hawq_style avg 2.497 rtn 72.90 rtn_bn 80.38 ft 80.59 (38s)
+seed 0 B=2.5 wf         avg 2.499 rtn 72.71 rtn_bn 80.48 ft 80.90 (38s)
+seed 0 B=2.5 baq        avg 2.498 rtn 58.05 rtn_bn 78.54 ft 78.76 (37s)
+seed 0 B=2.5 wf_global  avg 2.500 rtn 72.43 rtn_bn 80.46 ft 80.19 (39s)
+seed 0 B=3.0 uniform    avg 3.000 rtn 69.73 rtn_bn 78.87 ft 81.09 (38s)
+seed 0 B=3.0 per_layer  avg 2.996 rtn 79.14 rtn_bn 81.75 ft 81.45 (37s)
+seed 0 B=3.0 hawq_style avg 2.996 rtn 79.14 rtn_bn 81.75 ft 81.45 (37s)
+seed 0 B=3.0 wf         avg 2.999 rtn 79.77 rtn_bn 82.13 ft 81.36 (39s)
+seed 0 B=3.0 baq        avg 2.999 rtn 76.10 rtn_bn 81.43 ft 80.72 (39s)
+seed 0 B=3.0 wf_global  avg 3.000 rtn 79.87 rtn_bn 82.08 ft 81.38 (38s)
+seed 1 ep 0 val 33.24 t 53s
+seed 1 ep 1 val 53.22 t 106s
+seed 1 ep 2 val 65.48 t 159s
+seed 1 ep 3 val 64.96 t 210s
+seed 1 ep 4 val 68.02 t 263s
+seed 1 ep 5 val 67.64 t 314s
+seed 1 ep 6 val 73.16 t 367s
+seed 1 ep 7 val 71.76 t 423s
+seed 1 ep 8 val 69.74 t 476s
+seed 1 ep 9 val 76.76 t 531s
+seed 1 ep 10 val 75.16 t 585s
+seed 1 ep 11 val 80.16 t 638s
+seed 1 ep 12 val 80.70 t 691s
+seed 1 ep 13 val 83.02 t 745s
+seed 1 ep 14 val 83.24 t 798s
+seed 1 float val 83.24 test 83.52
+seed 1 B=2.0 uniform    avg 2.000 rtn 12.91 rtn_bn 40.31 ft 58.42 (33s)
+seed 1 B=2.0 per_layer  avg 2.000 rtn 12.91 rtn_bn 40.31 ft 58.42 (32s)
+seed 1 B=2.0 hawq_style avg 2.000 rtn 12.91 rtn_bn 40.31 ft 58.42 (33s)
+seed 1 B=2.0 wf         avg 2.000 rtn 12.91 rtn_bn 40.31 ft 58.42 (33s)
+seed 1 B=2.0 baq        avg 2.000 rtn 12.91 rtn_bn 40.31 ft 58.42 (32s)
+seed 1 B=2.0 wf_global  avg 2.000 rtn 12.91 rtn_bn 40.31 ft 58.42 (33s)
+seed 1 B=2.25 per_layer  avg 2.248 rtn 31.39 rtn_bn 78.22 ft 80.96 (34s)
+seed 1 B=2.25 hawq_style avg 2.248 rtn 31.39 rtn_bn 78.22 ft 80.96 (32s)
+seed 1 B=2.25 wf         avg 2.250 rtn 32.72 rtn_bn 78.36 ft 80.66 (33s)
+seed 1 B=2.25 baq        avg 2.247 rtn 31.11 rtn_bn 75.75 ft 80.50 (33s)
+seed 1 B=2.25 wf_global  avg 2.250 rtn 34.62 rtn_bn 79.32 ft 81.47 (32s)
+seed 1 B=2.5 per_layer  avg 2.494 rtn 65.41 rtn_bn 81.02 ft 81.73 (31s)
+seed 1 B=2.5 hawq_style avg 2.494 rtn 65.41 rtn_bn 81.02 ft 81.73 (36s)
+seed 1 B=2.5 wf         avg 2.498 rtn 62.99 rtn_bn 81.26 ft 81.10 (32s)
+seed 1 B=2.5 baq        avg 2.493 rtn 43.10 rtn_bn 78.69 ft 80.61 (35s)
+seed 1 B=2.5 wf_global  avg 2.500 rtn 68.24 rtn_bn 81.10 ft 80.97 (36s)
+seed 1 B=3.0 uniform    avg 3.000 rtn 64.31 rtn_bn 76.59 ft 80.53 (34s)
+seed 1 B=3.0 per_layer  avg 2.996 rtn 76.83 rtn_bn 82.33 ft 82.31 (34s)
+seed 1 B=3.0 hawq_style avg 2.996 rtn 76.83 rtn_bn 82.33 ft 82.31 (36s)
+seed 1 B=3.0 wf         avg 2.999 rtn 77.01 rtn_bn 82.43 ft 82.15 (34s)
+seed 1 B=3.0 baq        avg 2.999 rtn 72.40 rtn_bn 81.98 ft 81.84 (35s)
+seed 1 B=3.0 wf_global  avg 3.000 rtn 76.33 rtn_bn 82.38 ft 82.01 (35s)
+seed 2 ep 0 val 49.30 t 57s
+seed 2 ep 1 val 52.90 t 115s
+seed 2 ep 2 val 62.20 t 170s
+seed 2 ep 3 val 59.88 t 227s
+seed 2 ep 4 val 68.42 t 289s
+seed 2 ep 5 val 67.38 t 348s
+seed 2 ep 6 val 64.46 t 407s
+seed 2 ep 7 val 72.76 t 464s
+seed 2 ep 8 val 75.00 t 519s
+seed 2 ep 9 val 73.38 t 573s
+seed 2 ep 10 val 77.28 t 628s
+seed 2 ep 11 val 79.92 t 686s
+seed 2 ep 12 val 81.38 t 743s
+seed 2 ep 13 val 82.30 t 799s
+seed 2 ep 14 val 82.80 t 854s
+seed 2 float val 82.80 test 83.01
+seed 2 B=2.0 uniform    avg 2.000 rtn 20.95 rtn_bn 51.87 ft 69.76 (33s)
+seed 2 B=2.0 per_layer  avg 2.000 rtn 20.95 rtn_bn 51.87 ft 69.76 (35s)
+seed 2 B=2.0 hawq_style avg 2.000 rtn 20.95 rtn_bn 51.87 ft 69.76 (33s)
+seed 2 B=2.0 wf         avg 2.000 rtn 20.95 rtn_bn 51.87 ft 69.76 (34s)
+seed 2 B=2.0 baq        avg 2.000 rtn 20.95 rtn_bn 51.87 ft 69.76 (33s)
+seed 2 B=2.0 wf_global  avg 2.000 rtn 20.95 rtn_bn 51.87 ft 69.76 (31s)
+seed 2 B=2.25 per_layer  avg 2.248 rtn 48.85 rtn_bn 77.96 ft 80.10 (31s)
+seed 2 B=2.25 hawq_style avg 2.248 rtn 53.11 rtn_bn 78.36 ft 79.60 (32s)
+seed 2 B=2.25 wf         avg 2.248 rtn 54.62 rtn_bn 78.48 ft 79.73 (34s)
+seed 2 B=2.25 baq        avg 2.249 rtn 43.93 rtn_bn 77.33 ft 80.60 (35s)
+seed 2 B=2.25 wf_global  avg 2.250 rtn 57.44 rtn_bn 79.02 ft 80.27 (33s)
