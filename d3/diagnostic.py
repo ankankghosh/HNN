@@ -53,12 +53,13 @@ def fd_scores(m, x, y):
     return out
 
 
-def main(tau_h, seeds=range(5)):
-    torch.set_num_threads(4)
-    D = snn.load_shd(); rows = []
+def one(args):
+    tau_h, s = args
+    torch.set_num_threads(1)
+    D = snn.load_shd()
     perm = torch.randperm(len(D["ytr"]), generator=torch.Generator().manual_seed(7))
     A, B, C = perm[:2048], perm[2048:4096], perm[4096:5120]
-    for s in seeds:
+    if True:
         m = load("homogeneous", s, tau_h=tau_h)
         fA, gA = grad_scores(m, D["xtr"][A], D["ytr"][A]); fB, gB = grad_scores(m, D["xtr"][B], D["ytr"][B])
         fV, gV = grad_scores(m, D["xva"], D["yva"])
@@ -79,9 +80,15 @@ def main(tau_h, seeds=range(5)):
                  top10_overlap_halves=len(set(np.argsort(-fA)[:13]) & set(np.argsort(-fB)[:13])) / 13.0,
                  top10_overlap_reorder=len(set(np.argsort(-f)[:13]) & set(np.argsort(-f2)[:13])) / 13.0,
                  fisher=f.tolist(), fd=fd.tolist(), rate=rate.tolist())
-        rows.append(r)
         print({k: (round(v, 3) if isinstance(v, float) else v) for k, v in r.items() if not isinstance(v, list)}, flush=True)
-        json.dump(rows, open(f"{snn.ROOT}/results/phase1/d3_diagnostic.json", "w"))
+        return r
+
+
+def main(tau_h, seeds=range(5), procs=3):
+    import torch.multiprocessing as mp
+    with mp.get_context("fork").Pool(procs) as pool:
+        rows = sorted(pool.map(one, [(tau_h, s) for s in seeds]), key=lambda r: r["seed"])
+    json.dump(rows, open(f"{snn.ROOT}/results/phase1/d3_diagnostic.json", "w"))
 
 
 if __name__ == "__main__":
