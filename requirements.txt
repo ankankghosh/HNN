@@ -1,0 +1,5 @@
+torch>=2.5        # CPU build is enough; everything here was run without a GPU
+numpy
+scipy
+h5py
+pillow

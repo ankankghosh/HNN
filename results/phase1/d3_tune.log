@@ -1,0 +1,8 @@
+tune_hom_tau20ms_lr0.002         seed 100 val 81.86 test 71.20 spikes 4543 synops 672426 (310.4s)
+tune_hom_tau10ms_lr0.005         seed 100 val 88.24 test 74.56 spikes 4304 synops 636945 (313.4s)
+tune_hom_tau20ms_lr0.005         seed 100 val 91.67 test 72.97 spikes 4163 synops 616086 (319.3s)
+tune_hom_tau10ms_lr0.002         seed 100 val 81.62 test 67.71 spikes 4593 synops 679711 (325.0s)
+tune_hom_tau40ms_lr0.002         seed 100 val 81.74 test 69.88 spikes 4611 synops 682426 (307.6s)
+tune_hom_tau40ms_lr0.005         seed 100 val 90.81 test 76.33 spikes 4407 synops 652213 (308.7s)
+tune_hom_tau80ms_lr0.002         seed 100 val 78.19 test 69.26 spikes 5434 synops 804233 (303.6s)
+tune_hom_tau80ms_lr0.005         seed 100 val 87.75 test 74.43 spikes 4719 synops 698386 (302.1s)

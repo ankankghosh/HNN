@@ -1,0 +1,3 @@
+learned_tau                      seed 0 val 91.67 test 75.62 spikes 4395 synops 650463 (308.9s)
+random_heterogeneous             seed 0 val 91.42 test 73.14 spikes 4280 synops 633460 (313.4s)
+homogeneous                      seed 0 val 92.16 test 74.47 spikes 4243 synops 627982 (319.4s)
